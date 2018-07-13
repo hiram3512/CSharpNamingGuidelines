@@ -88,7 +88,7 @@ namespace Namespace
         /// <param name="args">参数(Camel)</param>
         public void Method(int args)
         {
-            //变量(Camel)
+            //局部变量(Camel)
             int variable = 10;
         }
     }
@@ -148,14 +148,19 @@ Type|Pascal|`public class StreamReader { ... }`
 Interface|Pascal|`public interface IEnumerable { ... }`
 Method|Pascal|`public virtual string ToString();`
 Property|Pascal|`public int Length { get; }`
-Event|Pascal|`public event EventHandler Exited;`
-Field|Pascal|`public int Min = 0;`
+Delegate|Pascal|`public delegate void EvnetHandler();`
+Public Event|Pascal|`public event EventHandler Exited;`
+Protected Event|Pascal|`public event EventHandler Exited;`
+Private Event|Camel|`public event EventHandler exited;`
+Public Field|Pascal|`public int Min = 0;`
+Protected Field|Pascal|`public int Min = 0;`
+private Field|Camel|`public int min = 0;`
 Enum|Pascal|`public enum FileMode`
 Parameter|Camel|`public static int ToInt32(string value)`
-Variable|Camel|`void Method(){int number = 10;}`
+Local Variable|Camel|`void Method(){int number = 10;}`
 
 -----
-### 命名细节
+### 特殊说明
 
 <font color=#0000FF size=5>注释</font>
 
@@ -171,7 +176,7 @@ Variable|Camel|`void Method(){int number = 10;}`
  * Copyright @ www.wikipedia.org
  *******************************************************************/
   ```
-**命名空间 类型 接口 方法名 属性 事件 字段 枚举 变量**:以"///"的方式注释,编辑器会自动完善注释,并且可以用生成工具直接生成代码注释文档.
+**命名空间 类型 接口 方法名 属性 事件 字段 枚举**:以"///"的方式注释,编辑器会自动完善注释,并且可以用生成工具直接生成代码注释文档.
   ```csharp
         /// <summary>
         /// 方法(Pascal)
@@ -179,7 +184,7 @@ Variable|Camel|`void Method(){int number = 10;}`
         /// <param name="args">参数(Camel)</param>
         public void Method(int args)
         {
-            //变量(Camel)
+            //局部变量(Camel)
             int variable = 10;
         }
   ```
@@ -200,17 +205,47 @@ Variable|Camel|`void Method(){int number = 10;}`
 
 <font color=#0000FF size=5>接口</font>
 
+接口定义以"I"开头,比如`IInterface`
+
 <font color=#0000FF size=5>方法名</font>
 
 <font color=#0000FF size=5>属性</font>
 
+属性都以Pascal方式命名
+
+<font color=#0000FF size=5>委托</font>
+
+微软官方建议添加以下两种后缀
+
+- EventHandler
+- Callback
+
+微软官方不建议添加以下后缀
+
+- ~~Delegate~~
+
+<font color=#0000FF size=5>事件</font>
+
+- 微软官方建议:事件参数添加后缀"EventArgs"
+
+- 习惯命名:事件以On为前缀(比如OnClick)
+
 <font color=#0000FF size=5>字段</font>
+
+Public/Protected以Pascal方式命名
+
+Private以Camel方式命名
+
+- ~~以m_为前缀的方式不建议(C++命名方式)~~
+- ~~以_为前缀的方式不建议(ReSharper命名方式)~~
+- ~~以类型为前缀的方式不建议(比如bool类型的字段以b为前缀,枚举以e为前缀)~~
+- ~~以类型为后缀的方式不建议(比如单位列表unitList,直接取名为units)~~
 
 <font color=#0000FF size=5>枚举</font>
 
 <font color=#0000FF size=5>参数</font>
 
-<font color=#0000FF size=5>变量</font>
+<font color=#0000FF size=5>局部变量</font>
 
 ### 详细示例
 
