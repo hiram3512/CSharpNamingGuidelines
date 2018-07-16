@@ -195,10 +195,10 @@ Local Variable|Camel|`void Method(){int number = 10;}`
 >>- 习惯命名:事件以On为前缀(比如OnClick)
 
 >字段
->>微软官方只规定了Public/Protected以Pascal方式命名,对internal,private类型的字段没有说明,因此各种第三方规范和插件中对私有字段规范也不一致.
+>>微软官方只规定了public/protected以Pascal方式命名,对internal,private类型的字段没有说明,因此各种第三方规范和插件中对私有字段规范也不一致.
 >>针对官方的示例代码,书写习惯,智能提示,代码补全和约定俗成的C#规范,建议private采用Camel方式命名,非Private字段采用Pascal方式命名.
->>- Public/Protected以Pascal方式命名
->>- Private以Camel方式命名
+>>- public/protected/internal以Pascal方式命名
+>>- private以Camel方式命名
 >>```csharp
 >>        public int Field1;
 >>        public static int Field2;
