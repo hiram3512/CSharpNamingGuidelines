@@ -168,15 +168,17 @@ Local Variable|Camel|`void Method(){int number = 10;}`
 >>        }
 >>*/
 >>```
+>>**待办及高亮**:在注释中添加"ToDo"高亮显示注释
 
 >命名空间
 
 >类型
+>>泛型默认T,U,V,W...
 
 >接口
->>接口定义以"I"开头,比如`IInterface`
+>>接口定义以"I"开头,比如`IInterface`,`IPlayer`
 
->方法名
+>方法
 
 >属性
 >>属性都以Pascal方式命名
@@ -189,13 +191,30 @@ Local Variable|Camel|`void Method(){int number = 10;}`
 >>- ~~Delegate~~
 
 >事件
-
 >>- 微软官方建议:事件参数添加后缀"EventArgs"
 >>- 习惯命名:事件以On为前缀(比如OnClick)
 
 >字段
->>Public/Protected以Pascal方式命名
->>Private以Camel方式命名
+>>微软官方只规定了Public/Protected以Pascal方式命名,对internal,private类型的字段没有说明,因此各种第三方规范和插件中对私有字段规范也不一致.
+>>针对官方的示例代码,书写习惯,智能提示,代码补全和约定俗成的C#规范,建议private采用Camel方式命名,非Private字段采用Pascal方式命名.
+>>- Public/Protected以Pascal方式命名
+>>- Private以Camel方式命名
+>>```csharp
+>>        public int Field1;
+>>        public static int Field2;
+>>        public readonly int Field3;
+>>        public const int Field4 = 4;
+>>
+>>        internal int Field5;
+>>        internal static int Field6;
+>>        internal readonly int Field7;
+>>        internal const int Field8 = 8;
+>>
+>>        private int field9;
+>>        private static int field10;
+>>        private readonly int field11;
+>>        private const int field8 = 12;
+>>```
 >>- ~~以m_为前缀的方式不建议(C++命名方式)~~
 >>- ~~以_为前缀的方式不建议(ReSharper命名方式)~~
 >>- ~~以类型为前缀的方式不建议(比如bool类型的字段以b为前缀,枚举以e为前缀)~~
@@ -206,3 +225,4 @@ Local Variable|Camel|`void Method(){int number = 10;}`
 >参数
 
 >局部变量
+>>局部变量可以使用var自动声明类型
