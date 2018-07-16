@@ -7,7 +7,7 @@
 /*******************************************************************
  * Description:This is a example class
  * Version: 1.0.0
- * Date: 20090716
+ * Date: 20180218
  * Author: Hiram  
  * Email: hiramtan@live.com    
  * Copyright @ www.wikipedia.org
@@ -168,7 +168,7 @@ Local Variable|Camel|`void Method(){int number = 10;}`
 >> /*******************************************************************
 >> * Description:This is a example class
 >> * Version: 1.0.0
->> * Date: 20131031 
+>> * Date: 20180218 
 >> * Author: Hiram  
 >> * Email: hiramtan@live.com    
 >> * Copyright @ www.wikipedia.org
