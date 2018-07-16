@@ -149,9 +149,7 @@ Interface|Pascal|`public interface IEnumerable { ... }`
 Method|Pascal|`public virtual string ToString();`
 Property|Pascal|`public int Length { get; }`
 Delegate|Pascal|`public delegate void EvnetHandler();`
-Public Event|Pascal|`public event EventHandler Exited;`
-Protected Event|Pascal|`public event EventHandler Exited;`
-Private Event|Camel|`public event EventHandler exited;`
+Event|Pascal|`public event EventHandler Exited;`
 Public Field|Pascal|`public int Min = 0;`
 Protected Field|Pascal|`public int Min = 0;`
 private Field|Camel|`public int min = 0;`
