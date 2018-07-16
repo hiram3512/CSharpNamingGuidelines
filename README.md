@@ -1,4 +1,4 @@
-# C#命名规范中文版
+# C#命名规范中文版/C#编码规范中文版
 
 
 ### 示例
@@ -162,90 +162,75 @@ Local Variable|Camel|`void Method(){int number = 10;}`
 -----
 ### 特殊说明
 
-<font color=#0000FF size=5>注释</font>
+>注释
+>>**文件注释**: 文件注释以如下方式进行,在扩展注释时(回车换行时)会自动添加注释行. 
+>>  ```csharp
+>> /*******************************************************************
+>> * Description:This is a example class
+>> * Version: 1.0.0
+>> * Date: 20131031 
+>> * Author: Hiram  
+>> * Email: hiramtan@live.com    
+>> * Copyright @ www.wikipedia.org
+>> *******************************************************************/
+>>  ```
+>>**命名空间 类型 接口 方法名 属性 事件 字段 枚举**:以"///"的方式注释,编辑器会自动完善注释,并且可以用生成工具直接生成代码注释文档.
+>>  ```csharp
+>>        /// <summary>
+>>        /// 方法(Pascal)
+>>        /// </summary>
+>>        /// <param name="args">参数(Camel)</param>
+>>        public void Method(int args)
+>>        {
+>>            //局部变量(Camel)
+>>            int variable = 10;
+>>        }
+>>  ```
+>>**其他注释**:以"//"的方式注释在上一行或行尾添加注释(比如局部变量,逻辑行)
+>>**段落注释**:以如下方式进行
+>>```csharp
+>>/*
+>>        public void Method()
+>>        {
+>>
+>>        }
+>>*/
+>>```
 
-**文件注释**: 文件注释以如下方式进行,在扩展注释时(回车换行时)会自动添加注释行.
- 
-  ```csharp
- /*******************************************************************
- * Description:This is a example class
- * Version: 1.0.0
- * Date: 20131031 
- * Author: Hiram  
- * Email: hiramtan@live.com    
- * Copyright @ www.wikipedia.org
- *******************************************************************/
-  ```
-**命名空间 类型 接口 方法名 属性 事件 字段 枚举**:以"///"的方式注释,编辑器会自动完善注释,并且可以用生成工具直接生成代码注释文档.
-  ```csharp
-        /// <summary>
-        /// 方法(Pascal)
-        /// </summary>
-        /// <param name="args">参数(Camel)</param>
-        public void Method(int args)
-        {
-            //局部变量(Camel)
-            int variable = 10;
-        }
-  ```
-**其他注释**:以"//"的方式注释在上一行或行尾添加注释(比如局部变量,逻辑行)
+>命名空间
 
-**段落注释**:以如下方式进行
-```csharp
-/*
-        public void Method()
-        {
+>类型
 
-        }
-*/
-```
-<font color=#0000FF size=5>命名空间</font>
+>接口
+>>接口定义以"I"开头,比如`IInterface`
 
-<font color=#0000FF size=5>类型</font>
+>方法名
 
-<font color=#0000FF size=5>接口</font>
+>属性
+>>属性都以Pascal方式命名
 
-接口定义以"I"开头,比如`IInterface`
+>委托
+>>微软官方建议添加以下两种后缀
+>>- EventHandler
+>>- Callback
+>>微软官方不建议添加以下后缀
+>>- ~~Delegate~~
 
-<font color=#0000FF size=5>方法名</font>
+>事件
 
-<font color=#0000FF size=5>属性</font>
+>>- 微软官方建议:事件参数添加后缀"EventArgs"
+>>- 习惯命名:事件以On为前缀(比如OnClick)
 
-属性都以Pascal方式命名
+>字段
+>>Public/Protected以Pascal方式命名
+>>Private以Camel方式命名
+>>- ~~以m_为前缀的方式不建议(C++命名方式)~~
+>>- ~~以_为前缀的方式不建议(ReSharper命名方式)~~
+>>- ~~以类型为前缀的方式不建议(比如bool类型的字段以b为前缀,枚举以e为前缀)~~
+>>- ~~以类型为后缀的方式不建议(比如单位列表unitList,直接取名为units)~~
 
-<font color=#0000FF size=5>委托</font>
+>枚举
 
-微软官方建议添加以下两种后缀
+>参数
 
-- EventHandler
-- Callback
-
-微软官方不建议添加以下后缀
-
-- ~~Delegate~~
-
-<font color=#0000FF size=5>事件</font>
-
-- 微软官方建议:事件参数添加后缀"EventArgs"
-
-- 习惯命名:事件以On为前缀(比如OnClick)
-
-<font color=#0000FF size=5>字段</font>
-
-Public/Protected以Pascal方式命名
-
-Private以Camel方式命名
-
-- ~~以m_为前缀的方式不建议(C++命名方式)~~
-- ~~以_为前缀的方式不建议(ReSharper命名方式)~~
-- ~~以类型为前缀的方式不建议(比如bool类型的字段以b为前缀,枚举以e为前缀)~~
-- ~~以类型为后缀的方式不建议(比如单位列表unitList,直接取名为units)~~
-
-<font color=#0000FF size=5>枚举</font>
-
-<font color=#0000FF size=5>参数</font>
-
-<font color=#0000FF size=5>局部变量</font>
-
-### 详细示例
-
+>局部变量
