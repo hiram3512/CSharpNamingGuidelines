@@ -37,51 +37,25 @@ namespace Namespace
         public delegate void EvnetHandler();
 
         /// <summary>
-        /// 事件
-        /// On前缀
+        /// 事件(Pascal):On前缀
         /// </summary>
         public event EvnetHandler OnEvent;
 
         /// <summary>
-        /// 私有字段(Camel)
-        /// </summary>
-        private int field1;
-
-        /// <summary>
-        /// 私有只读字段(Camel)
-        /// </summary>
-        private readonly int field2;
-
-        /// <summary>
-        /// 私有静态字段(Camel)
-        /// </summary>
-        private static int field3;
-
-        /// <summary>
-        /// 私有常量(Camel)
-        /// </summary>
-        private const int field4 = 4;
-
-        /// <summary>
         /// 公有字段(Pascal)
         /// </summary>
-        public int Field5;
+        public int Field1;
 
         /// <summary>
-        /// 公有只读字段(Pascal)
+        /// 受保护字段(Pascal)
         /// </summary>
-        public readonly int Field6;
+        protected int Field2;
 
         /// <summary>
-        /// 公有静态字段(Pascal)
+        /// 私有字段(Camel)
         /// </summary>
-        public static int Field7;
-
-        /// <summary>
-        /// 公有常量(Pascal)
-        /// </summary>
-        public const int Field8 = 8;
-
+        private int field3;
+        
         /// <summary>
         /// 方法(Pascal)
         /// </summary>
