@@ -125,8 +125,8 @@ Property|Pascal|`public int Length { get; }`
 Delegate|Pascal|`public delegate void EvnetHandler();`
 Event|Pascal|`public event EventHandler Exited;`
 Public Field|Pascal|`public int Min = 0;`
-Protected Field|Pascal|`public int Min = 0;`
-private Field|Camel|`public int min = 0;`
+Protected Field|Pascal|`protected int Min = 0;`
+private Field|Camel|`private int min = 0;`
 Enum|Pascal|`public enum FileMode`
 Parameter|Camel|`public static int ToInt32(string value)`
 Local Variable|Camel|`void Method(){int number = 10;}`
