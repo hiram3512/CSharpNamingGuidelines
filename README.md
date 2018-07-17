@@ -173,6 +173,7 @@ Local Variable|Camel|`void Method(){int number = 10;}`
 >命名空间
 
 >类型
+>>结构体命名方式与类一致
 >>泛型默认T,U,V,W...
 
 >接口
