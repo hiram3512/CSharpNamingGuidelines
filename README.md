@@ -173,8 +173,9 @@ Local Variable|Camel|`void Method(){int number = 10;}`
 >命名空间
 
 >类型
->>结构体命名方式与类一致
->>泛型默认T,多个泛型根据反编译微软dll,建议命名T1,T2,T3,T4...
+>>- 结构体命名方式与类一致
+>>- 泛型默认T
+>>- 多个泛型根据反编译微软dll,建议命名T1,T2,T3,T4...
 
 >接口
 >>接口定义以"I"开头,比如`IInterface`,`IPlayer`
