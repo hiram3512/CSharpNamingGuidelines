@@ -197,13 +197,15 @@ Local Variable|Camel|`void Method(){int number = 10;}`
 >>- 习惯命名:事件以On为前缀(比如OnClick)
 
 >字段
+>>微软团队初期使用Camel方式命名私有字段,后来逐步采用下划线+Camel方式命名,这样做的好处是不必再识别字段是否是局部变量.
+
 >>字段建议是非Public类型的,以属性替换公有的字段:这样外部访问更安全(readonly,const等除外),并且外部调用者全部使用Pascal命名方式调用对象逻辑.
 
 >>微软官方只规定了public/protected以Pascal方式命名,对internal,private类型的字段没有说明,因此各种第三方规范和插件中对私有字段规范也不一致.
 
 >>针对官方的示例代码,书写习惯,智能提示,代码补全和约定俗成的C#规范,建议private采用下划线+Camel方式命名,非Private字段采用Pascal方式命名.
 
->>微软团队初期使用Camel方式命名私有字段,后来逐步采用下划线+Camel方式命名,这样做的好处是不必再识别字段是否是局部变量.
+>>参考微软官方命名规则,C#高级编程,Resharp命名规范,.Net源码命名规则,建议字段命名方式如下:
 
 >>- public/protected/internal以Pascal方式命名
 >>- private以下划线+Camel方式命名
@@ -220,7 +222,6 @@ Local Variable|Camel|`void Method(){int number = 10;}`
 >>        private const int _field8 = 0;
 >>```
 >>- ~~以m_为前缀的方式不建议(C++命名方式)~~
->>- ~~以_为前缀的方式不建议(ReSharper命名方式)~~
 >>- ~~以类型为前缀的方式不建议(比如bool类型的字段以b为前缀,枚举以e为前缀)~~
 >>- ~~以类型为后缀的方式不建议(比如单位列表unitList,直接取名为units)~~
 
