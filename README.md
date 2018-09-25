@@ -52,7 +52,7 @@ namespace Namespace
         protected int Field2;
 
         /// <summary>
-        /// 私有字段(Camel)
+        /// 私有字段(_Camel)
         /// </summary>
         private int _field3;
         
