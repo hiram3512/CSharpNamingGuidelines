@@ -31,8 +31,7 @@ namespace Namespace
         public int Property { get; set; }
 
         /// <summary>
-        /// 委托(Pascal)
-        /// EventHandler后缀
+        /// 委托(Pascal):EventHandler后缀
         /// </summary>
         public delegate void EvnetHandler();
 
